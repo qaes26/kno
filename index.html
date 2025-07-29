@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاضرات في إدارة المعرفة - إعداد: قيس طلال غالب الجازي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #f0f2f5;
+            --page-bg: #ffffff;
+            --text-primary: #1c1e21;
+            --text-secondary: #606770;
+            --accent: #1877f2;
+            --border-color: #ced0d4;
+            --shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        body {
+            font-family: 'Readex Pro', sans-serif; background-color: var(--bg-main);
+            color: var(--text-secondary); display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; margin: 0; padding: 2rem 1rem;
+        }
+
+        #page-container {
+            width: 100%; max-width: 950px; background-color: var(--page-bg);
+            border-radius: 12px; box-shadow: var(--shadow); overflow: hidden;
+            display: flex; flex-direction: column; border: 1px solid var(--border-color);
+        }
+
+        .page { display: none; padding: 2.5rem 3.5rem; flex-grow: 1; animation: fadeIn 0.4s ease; }
+        .page.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+
+        #page-0 { text-align: center; padding: 6rem 2rem; background-color: #f8f9fa; }
+        #page-0 h1 { font-size: 2.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 1rem; }
+        #page-0 h2 { font-size: 1.6rem; color: var(--accent); font-weight: 600; margin-bottom: 3rem; }
+
+        .page-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border-color); padding-bottom: 1.2rem; margin-bottom: 2rem;
+        }
+        .page-header h2 { font-size: 1.6rem; color: var(--text-primary); font-weight: 600; }
+
+        h3 { font-size: 1.4rem; color: var(--text-primary); font-weight: 600; margin: 2rem 0 1rem 0; border-right: 4px solid var(--accent); padding-right: 1rem;}
+        p, li { line-height: 1.9; margin-bottom: 1rem; font-size: 1.1rem; }
+        ul, ol { list-style-position: inside; padding-right: 0.5rem;}
+
+        .diagram-container { border: 1px solid #eef2f9; padding: 1.5rem; margin: 2rem auto; border-radius: 8px; }
+        .diagram-title { font-weight: 600; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 1.5rem; text-align: center; }
+        svg { width: 100%; max-width: 450px; font-family: 'Readex Pro', sans-serif; display: block; margin: auto; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+        th, td { padding: 12px 15px; text-align: right; border: 1px solid var(--border-color); }
+        thead { background-color: #f0f2f5; color: var(--text-primary); font-weight: 600; }
+        td:first-child { font-weight: 600; }
+
+        .pagination-controls {
+            display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem;
+            border-top: 1px solid var(--border-color); background-color: #f8fafc;
+        }
+        .pagination-btn {
+            background-color: var(--accent); color: white; border: none; padding: 0.7rem 1.6rem;
+            border-radius: 6px; font-family: 'Readex Pro', sans-serif; font-size: 1rem;
+            font-weight: 600; cursor: pointer; transition: all 0.2s ease;
+        }
+        .pagination-btn:hover { background-color: #166fe5; }
+        .pagination-btn:disabled { background-color: #94a3b8; cursor: not-allowed; }
+        .progress-indicator { font-weight: 600; color: var(--text-primary); }
+    </style>
+</head>
+<body>
+    <div id="page-container">
+        <!-- Page 0: Title Page -->
+        <div id="page-0" class="page active">
+            <h1>محاضرات في مادة إدارة المعرفة</h1>
+            <h2>إعداد وتقديم الطالب: قيس طلال غالب الجازي</h2>
+        </div>
+        <!-- Page 1 -->
+        <div class="page"><div class="page-header"><h2>خصائص المعرفة</h2></div><h3>-2 خصائص المعرفة</h3><p>للمعرفة مجموعة من الخصائص حددها كل من هوسيل وبيل (Bell and Housel) ويمكن أن نوجزها كما يلي:</p><ul><li><strong>المعارف يمكن أن تولد:</strong> إن بعض الشركات لديها خصوبة ذهنية مما يجعلها قادرة على توليد معرفة جديدة وهذا يمثله الأفراد المبتكرون في الشركة الذين يتم التمويل عليهم في عملية استدامة الابتكار وتجديد المعرفة.</li><li><strong>المعرفة يمكن أن تموت أو تضيع:</strong> كما تولد المعرفة يمكن أن تموت، ان القليل من المعارف التي تتكون خلال تجاربنا هي التي تسجل وانا ما كتب منها في الكتب والدوريات هو القليل جدا من معرفتنا، ولهذا فالغالبية العظمى من المعارف تموت مع الشخص، ومع ذلك فإن فكرة المعرفة ذات خصوصية فبعض المعارف تموت بموت الشخص أما المعارف الأخرى تموت بإحلال معارف جديدة محل القديمة لتتقاعد عن الاستخدام كما يمكن ضياع المعرفة بسبب الفشل في تخزينها.</li></ul></div>
+        <!-- Page 2 -->
+        <div class="page"><div class="page-header"><h2>خصائص المعرفة (تابع)</h2></div><h3>(تابع) خصائص المعرفة</h3><ul><li><strong>المعرفة يمكن أن تمتلك:</strong> بفعل معدلات التعليم العالي فإن أغلب المعارف ذات قيمة من أجل زيادة ثروة الشركات... وتتمتع بالحماية القانونية شأنها شأن الملكية الفردية.</li><li><strong>المعرفة متجذرة في الأفراد:</strong> ليس كل معرفة في الشركة صريحة ومنظورة، فالكثير من المعرفة التنظيمية يحتفظ بها بشكل خفي في رؤوس الأفراد فهناك معرفة فطرية متجذرة.</li><li><strong>المعرفة قابلة للتخزين:</strong> فيمكن للمؤسسة أن تخزن معارفها في وثائق، أشرطة، على الحاسوب، ...الخ</li><li><strong>المعرفة قابلة للتطبيق:</strong> أي أن المعرفة يمكن أن يجسدها صاحبها في أعماله.</li><li><strong>عدم نضوب المعرفة (غير قابلة للاهتالك):</strong> فاستعمال المعرفة لا يؤدي إلى نفاذها حتى ولو انتقلت إلى أفراد آخرين فصاحبها لن يفقدها، بل بالعكس ستزداد معارفه من خلال تبادل المعارف مع العاملين.</li><li><strong>المعرفة قابلة للاستنساخ:</strong> أي أن المؤسسة إذا ما استطاعت تخزين المعارف التي يتوفر عليها عاملوها؛ فإنها بذلك تستطيع أن تجعل منها عدة نسخ وبتكاليف منخفضة.</li></ul></div>
+        <!-- Page 3 -->
+        <div class="page"><div class="page-header"><h2>أهمية المعرفة</h2></div><h3>-3 أهمية المعرفة:</h3><p>ان أهمية المعرفة للمنظمات ليس في المعرفة إنما في تشكلها من إضافة قيمة لها وتبرز أهمية المعرفة فيما يلي:</p><ul><li>أسهمت إدارة المعرفة في مرونة المنظمات من خلال دفعها واعتمادها أشكال للتنسيق والتصميم تكون أكثر مرونة؛</li><li>تتيح للمنظمة التركيز في المجالات التي تكون أكثر إبداعا وتحفز الإبداع والابتكار المتواصل؛</li><li>تحول المنظمة إلى مجتمعات معرفية تتكيف مع التغير المتسارع في البيئة؛</li><li>تعد المعرفة البشرية المصدر الأساسي للقيمة؛ - ترشد المعرفة المدراء كيفية إدارة منظماتهم؛</li><li>تعتبر العنصر الفعال لخلق الميزة التنافسية وإدامتها.</li></ul></div>
+        <!-- Page 4 -->
+        <div class="page"><div class="page-header"><h2>أنواع المعرفة</h2></div><h3>ثالثا: أنواع المعرفة</h3><p>هناك أنواع وتصنيفات عديدة من المعرفة التي قدمها المختصون للمعرفة، ومن أبرزها للمؤسسات نذكر:</p><h3>-1 تصنيف Marquardt:</h3><p>صنف المعرفة إلى 5 أنواع وهي:</p><ul><li><strong>معرفة ماذا: know-what:</strong> وهي معرفة أي نوع من المعرفة هو المطلوب.</li><li><strong>معرفة كيف: know-how:</strong> وهي معرفة كيف يمكن التعامل مع ظاهرة ما.</li><li><strong>معرفة لماذا: know-why:</strong> وهي معرفة لماذا هناك حاجة إلى نوع معين من المعرفة.</li><li><strong>معرفة أين: know-where:</strong> وهي معرفة أين يمكن العثور على معرفة محددة بعينها.</li><li><strong>معرفة متى: know-when:</strong> وهي معرفة متى تكون هناك حاجة إلى معرفة معينة.</li></ul><h3>-2 تصنيف Zack:</h3><p>يقدم ميشيل زاك تصنيفا آخر للمعرفة في ثلاث أنواع هي:</p><ul><li><strong>المعرفة الجوهرية core:</strong> هي النوع او النطاق الأدنى من المعرفة الذي يكون مطلوبا لدى المؤسسة...</li><li><strong>المعرفة المتقدمة Advanced:</strong> هو النطاق الذي يجعل المؤسسة تتمتع بقابلية بقاء التنافسية...</li><li><strong>المعرفة الابتكارية Innovation:</strong> هي المعرفة التي تمكن المؤسسة من أن تقود صناعاتها ومنافسيها...</li></ul><h3>-3 تصنيف Nonaka:</h3><p>حيث صنف المعرفة إلى معرفة ضمنية ومعرفة صريحة، حيث أكد "نوناكا" أهمية هذا التمييز في دراسة الشركات الخالقة للمعرفة، ويعد هذا التصنيف الأكثر استخداما.</p></div>
+        <!-- Page 5 -->
+        <div class="page"><div class="page-header"><h2>تعريف المعرفة الصريحة والضمنية</h2></div><h3>-1-3 المعرفة الصريحة</h3><p>هي المعرفة الموضوعة في البرامج والمستندات والإجراءات والسياسات فهي معرفة مرمزة ويمكن تشاركها وتقاسمها، ويشير الكاتبان نوناكا وتاكيشي إلى أن المعرفة الصريحة هي التي يمكن التعبير عنها بالكلمات والأرقام والأصوات، وتتم مشاركتها على شكل بيانات، صيغ علمية، مرئيات، أشرطة سمعية، مواصفات المنتج، كتيبات، وبصفة عامة فهي التي تنقل بسهولة بين الأفراد رسميا وبشكل منهجي.</p><h3>-2-3 المعرفة الضمنية</h3><p>تعرف بأنها "المعرفة غير الرسمية، الذاتية، والمعبر عنها بالطرق النوعية والحدسية وغير القابلة للنقل والتعليم، وتسمى المعرفة الملتصقة والتي توجد في عمل الأفراد والفرق داخل الشركة، وهذه المعرفة هي التي تعطي خصوصية الشركة وهي الأساس في قدرتها على انشاء المعرفة."</p></div>
+        <!-- Page 6 -->
+        <div class="page"><div class="page-header"><h2>هرم المعرفة</h2></div><h3>رسم توضيحي لهرم المعرفة</h3><p>بعد المعرفة تأتي الحكمة (Wisdom) وهي المرحلة التي يصل إليها الشخص بعد عمر طويل... ومن حيث التدرج الهرمي تأتي الحكمة في قمة الهرم المتدرج من البيانات والمعلومات والمعرفة... ويمكن توضيح هرم المعرفة في الشكل اللاحق:</p><div class="diagram-container"><div class="diagram-title">شكل رقم (02): هرم المعرفة</div><svg viewBox="0 0 200 130"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#4a5568;" /><stop offset="100%" style="stop-color:#2d3748;" /></linearGradient></defs><polygon points="100,5 10,125 190,125" fill="url(#g2)" /><line x1="10" y1="125" x2="190" y2="125" stroke="#fff" stroke-width="1.5"/><line x1="30" y1="95" x2="170" y2="95" stroke="#fff" stroke-width="1.5"/><line x1="50" y1="65" x2="150" y2="65" stroke="#fff" stroke-width="1.5"/><line x1="70" y1="35" x2="130" y2="35" stroke="#fff" stroke-width="1.5"/><text x="100" y="25" text-anchor="middle" font-size="12" font-weight="bold" fill="white">الحكمة</text><text x="100" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="white">المعرفة</text><text x="100" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="white">المعلومات</text><text x="100" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="white">البيانات</text></svg></div></div>
+        <!-- Page 7 -->
+        <div class="page"><div class="page-header"><h2>جدول المقارنة</h2></div><h3>جدول رقم(02): الفرق بين المعرفة الضمنية و المعرفة الصريحة</h3><table><thead><tr><th>الاختلاف</th><th>المعرفة الضمنية</th><th>المعرفة الصريحة</th></tr></thead><tbody><tr><td><strong>امتلاكها</strong></td><td>يمتلكها الفرد بشكل غير مقصود</td><td>يمتلكها الفرد بشكل مقصود</td></tr><tr><td><strong>قابليتها للفهم</strong></td><td>ليست مفهومة بشكل جيد لصعوبة التعبير عنها بعض الأحيان وصعوبة تدوينها</td><td>مفهومة حيث يمكن التعبير عنها بالكتابة وباﻷرقام واﻷشكال وغير ذلك</td></tr><tr><td><strong>استخلاصها</strong></td><td>من الصعب استخلاصها من مصدرها</td><td>من السهل استخلاصها من مصدرها</td></tr><tr><td><strong>تناقلها وتشاركها</strong></td><td>يمكن تناقلها عبر المناقشات والتفاعلات الشخصية</td><td>يمكن تناقلها من اﻷدلة اﻹرشادية المكتوبة واﻹجراءات والبرامج اﻹلكترونية</td></tr><tr><td><strong>طبيعتها</strong></td><td>معرفة غير رسمية وغير مهيكلة</td><td>معرفة رسمية مهيكلة</td></tr><tr><td><strong>مصدرها</strong></td><td>عقول اﻷشخاص وذاكرة المنظمة</td><td>المستندات والبرامج الحاسوبية وقواعد البيانات</td></tr><tr><td><strong>توثيقها</strong></td><td>لا يمكن توثيقها وإن أمكن فإنها عملية صعبة</td><td>يمكن توثيقها او تدوينها</td></tr><tr><td><strong>أمثلتها</strong></td><td>الخبرات والمهارات الشخصية المضمنة في عقول وذاكرة اﻷشخاص</td><td>أدلة التعليمات وتقارير نتائج الابحاث وغير ذلك مما يمكن تدوينها سابقا</td></tr></tbody></table></div>
+        <!-- Page 8 -->
+        <div class="page"><div class="page-header"><h2>أساسيات إدارة المعرفة</h2></div><h3>خامساً: مصادر المعرفة</h3><p>هناك مصدرين من أجل الحصول على المعرفة واكتسابها بالنسبة للمؤسسة وهما مصادر داخلية ومصادر خارجية:</p><ul><li><strong>المصادر الداخلية:</strong> تعتبر المعرفة الضمنية ضمن المصادر الداخلية لاكتساب المعرفة وتشتمل المعرفة الضمنية على خبرات الأفراد، معتقداتهم وافتراضاتهم، ذاكرتهم ومذكراتهم...</li><li><strong>المصادر الخارجية:</strong> هناك عدد كبير من المصادر الخارجية التي يمكن للمنظمة الحصول منها على المعرفة ومن هذه المصادر: التوصية (الاقتداء) أمام المنظمات الأخرى، والمشاركة في المؤتمرات، واستئجار الخبراء...</li></ul><h3>-3-2 أهمية إدارة المعرفة:</h3><p>إلدارة المعرفة أهمية كبيرة جدا على سواء على مستوى الأفراد أو الفرق أو على مستوى المنظمة ككل وذلك لكونها المصدر الرئيسي في الاستخدام...</p></div>
+        <!-- Page 9 -->
+        <div class="page"><div class="page-header"><h2>أهداف إدارة المعرفة</h2></div><h3>-4-2 أهداف إدارة المعرفة:</h3><p>تهدف إدارة المعرفة إلى تحقيق مجموعة من الأهداف من بينها نذكر:</p><ul><li>إنتاج المعرفة من مصدرها والعمل على التخزين المناسب لها وإعادة استخدامها؛</li><li>التحقق من فاعلية تقنيات المنظمة، والتحقق من عملية تحويل أنواع المعرفة من المعرفة الضمنية إلى المعرفة الظاهرية...</li><li>جذب رأس مال فكري أكبر ليتم وضع حلول للمشاكل التي تواجه المنظمة؛</li><li>توليد البيئة التنظيمية التي تدعم كل فرد في المنظمة على المشاركة بالمعرفة؛ ليتم رفع مستوى المعرفة لدى الآخرين؛</li><li>تحول المنظمات من الاقتصاد التقليدي إلى الاقتصاد العالمي الحديث وهو اقتصاد المعرفة؛</li><li>العمل على تحديد المعرفة الأساسية وكيفية الوصول إليها وحمايتها؛</li><li>تسعى إلى الإبداع والوعي والتصميم الهادف؛</li><li>بناء قدرات التعلم وانتشار ثقافة المعرفة والتحفيز ليتم تحديثها والتنافس عن طريق الذكاء البشري؛</li></ul></div>
+    </div>
+    <div id="pagination-container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageContainer = document.getElementById('page-container');
+            const pages = Array.from(document.querySelectorAll('.page'));
+            let currentPageIndex = 0;
+
+            const paginationContainer = document.createElement('div');
+            paginationContainer.className = 'pagination-controls';
+
+            const prevButton = document.createElement('button');
+            prevButton.textContent = '→ الصفحة السابقة';
+            prevButton.className = 'pagination-btn';
+
+            const progressIndicator = document.createElement('span');
+            progressIndicator.className = 'progress-indicator';
+            
+            const nextButton = document.createElement('button');
+            nextButton.textContent = 'الصفحة التالية ←';
+            nextButton.className = 'pagination-btn';
+
+            paginationContainer.appendChild(prevButton);
+            paginationContainer.appendChild(progressIndicator);
+            paginationContainer.appendChild(nextButton);
+            pageContainer.appendChild(paginationContainer);
+
+            function showPage(index) {
+                pages.forEach((p, i) => { p.classList.toggle('active', i === index); });
+                currentPageIndex = index;
+                updateControls();
+            }
+
+            function updateControls() {
+                if (currentPageIndex === 0) {
+                    prevButton.style.visibility = 'hidden';
+                    progressIndicator.style.visibility = 'hidden';
+                    nextButton.textContent = 'ابدأ التصفح ←';
+                } else {
+                    prevButton.style.visibility = 'visible';
+                    progressIndicator.style.visibility = 'visible';
+                    nextButton.textContent = 'الصفحة التالية ←';
+                }
+
+                prevButton.disabled = (currentPageIndex <= 1 && currentPageIndex !== 0);
+                nextButton.disabled = (currentPageIndex === pages.length - 1);
+                progressIndicator.textContent = `صفحة ${currentPageIndex} من ${pages.length - 1}`;
+            }
+
+            nextButton.addEventListener('click', () => {
+                if (currentPageIndex < pages.length - 1) showPage(currentPageIndex + 1);
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentPageIndex > 0) showPage(currentPageIndex - 1);
+            });
+
+            showPage(0);
+        });
+    </script>
+</body>
+</html>
